@@ -54,7 +54,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         
         let planDict = saveData.dictionaryForKey(keyArray[indexPath.row])
-        cell.textLabel?.text = planDict!["youzi"] as? String
+        cell.textLabel?.text = planDict?["youzi"] as? String
         return cell
     }
     @IBAction func add() {
